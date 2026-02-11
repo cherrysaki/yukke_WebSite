@@ -190,6 +190,7 @@ header a {
 .favorite-contents {
   margin-top: 80px;
   display: flex;
+  flex-direction: column;
   text-align: left;
   column-gap: 16px;
 }
@@ -370,6 +371,44 @@ header a {
     height: 60px;
     line-height: 60px;
     background-position: left 16px center;
+  }
+}
+
+.travel-collage {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 150px);
+  gap: 6px;
+  grid-auto-flow: dense;
+}
+
+.travel-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: brightness(1.1) contrast(0.9);
+  transition: filter 0.3s ease;
+}
+
+.travel-collage img.span-wide {
+  grid-column: span 2;
+}
+
+.travel-collage img.span-tall {
+  grid-row: span 2;
+}
+
+.travel-collage img.span-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+  .travel-collage {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
   }
 }
 
