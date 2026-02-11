@@ -9,6 +9,37 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic&display=swap"
       rel="stylesheet"
     />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "qid4jfq",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
     <title>My Website</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -18,96 +49,31 @@
       <div class="container">
         <p>My Website</p>
         <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#club">部活動</a></li>
-          <li><a href="#favorite">好きなこと</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#works">works</a></li>
+          <li><a href="#favorite">hobby</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </div>
     </header>
+
     <section class="firstview">
-      <h1>My Website</h1>
-      <p>私のウェブサイト</p>
+      <h1>Saki Kambayashi</h1>
     </section>
 
     <section class="about" id="about">
       <div class="container">
         <div class="profile">
           <div>
-            <h2 class="section-title">ABOUT</h2>
-            <h3>デザインするのが大好きな高校1年生</h3>
+            <div class="profile-header left">
+              <h2 class="section-title">about me</h2>
+              <div class="line"></div>
+            </div>
+            <h3>神林 沙希 <span>Kambayashi Saki</span></h3>
             <p>
-              WebDesignコースに通っている高校1年生です。学校の文化祭や部活動でポスターを制作したことをきっかけにデザインするのにハマりました！
-            </p>
-          </div>
-          <img src="images/design.png" alt="" />
-        </div>
-        <div class="school-club">
-          <div class="content">
-            <img src="images/school.jpg" alt="" />
-            <h3>学校について</h3>
-            <p>
-              Life is Tech!高校に通っています。
-              白金高輪駅から10分くらいになります。
-            </p>
-            <a href="https://life-is-tech.com/school">詳しくはこちら</a>
-          </div>
-          <div class="content">
-            <img src="images/trumpet-small.png" alt="" />
-            <h3>吹奏楽部</h3>
-            <p>
-              吹奏楽部に中1のころから所属しています！<br />
-              演奏している楽器はトランペットです。<br />
-              一番好きな演奏曲はルパンのテーマ曲です。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="club" id="club">
-      <div class="container">
-        <div class="club-img">
-          <img src="images/trumpet-big.png" alt="" />
-          <img src="images/background-pattern.png" alt="" />
-          <img src="images/trumpet-small.png" alt="" />
-        </div>
-        <div class="club-text">
-          <h2>吹奏楽部</h2>
-          <p>
-            私たちの吹奏楽部は週4回、<br />
-            普段はコンクールに向けた練習を、行っています。<br />
-            今は学園祭に向けて、流行りの曲を練習中です。<br />
-            大変なことも多いですが、とても楽しいです！
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="favorite" id="favorite">
-      <div class="container">
-        <h2 class="section-title">好きなこと</h2>
-        <div class="favorite-contents">
-          <div class="favorite-content">
-            <img src="images/camera.png" alt="" />
-            <h3>カメラ</h3>
-            <p>
-              誕生日にカメラをもらったことをきっかけにしてカメラにハマっています！たくさん写真をこれからも撮り続けたいです。
-            </p>
-          </div>
-          <div class="favorite-content">
-            <img src="images/dog.png" alt="" />
-            <h3>犬</h3>
-            <p>
-              犬を二年前から飼い始めています。すごく人懐こい犬でとても大好きです。
-            </p>
-          </div>
-          <div class="favorite-content">
-            <img src="images/youtube.png" alt="" />
-            <h3>Youtube</h3>
-            <p>
-              最近は友達に勧められてYoutubeをよく見るようになりました。見すぎて勉強しなくならないように気をつけないといけないです。
+              19歳/東京都出身<br />
+              メンター名はゆっけ。<br />
+              LifeisTech!17期のiPhoneコース<br />
             </p>
           </div>
         </div>
@@ -116,47 +82,74 @@
 
     <section class="works" id="works">
       <div class="container">
-        <h2 class="section-title">Works</h2>
-        <a href="https://life-is-tech.com" class="works-content">
-          <img src="images/website.png" alt="" />
-          <div class="works-text">
-            <h3>オリジナルWebサイト<span>2023年07月　製作</span></h3>
-            <p>
-              「Life is
-              Tech!（ライフイズテック）」のWebサイトを作成しました。こだわったところは色の使い方です。
-            </p>
+        <div class="profile-header right">
+          <div class="line"></div>
+          <h2 class="section-title">works</h2>
+        </div>
+        <div class="works-grid">
+          <div class="works-content">
+            <img src="MyWebSozai/sharepalette.png" alt="" />
+            <div class="works-text">
+              <h3>SharePalette</h3>
+              <p>思い出と共に、自分だけのパレットを作り出そう</p>
+            </div>
           </div>
-        </a>
-        <a href="https://youtu.be/vZ-b_Oy_oGY/" class="works-content">
-          <img src="images/movie.png" alt="" />
-          <div class="works-text">
-            <h3>オリジナル映像<span>2023年01月　製作</span></h3>
-            <p>
-              Webデザインコースがどんなコースかわかるような映像を作成しました。どんなことができるか伝わると嬉しいです。
-            </p>
+
+          <div class="works-content">
+            <img src="MyWebSozai/sharestudy.png" alt="" />
+            <div class="works-text">
+              <h3>ShareStudy</h3>
+              <p>目標時間を宣言して集中を競い合おう</p>
+            </div>
           </div>
-        </a>
+
+          <div class="works-content">
+            <img src="MyWebSozai/hibiku.png" alt="" />
+            <div class="works-text">
+              <h3>Hibiku</h3>
+              <p>感情を、響かせよう</p>
+            </div>
+          </div>
+
+          <div class="works-content">
+            <img src="MyWebSozai/yagamy.png" alt="" />
+            <div class="works-text">
+              <h3>Yagamy</h3>
+              <p>矢上祭の公式アプリ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="favorite" id="favorite">
+      <div class="container">
+        <div class="profile-header left">
+          <h2 class="section-title">hobby</h2>
+          <div class="line"></div>
+        </div>
+        <div class="favorite-contents">
+          <p>旅行に行くのが趣味です。<br>
+            旅先の景色や空気に触れることで、日常の見え方が少し変わる瞬間が好きです。<br>
+            春休みもたくさんの旅行に行く予定です。
+          </p>
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>
-          中学2年生の頃に文化祭のポスターを作ったことをきっかけに、パソコンを使ったものづくりにハマりました！<br />
-          これからもものづくりを続けていきたいです。
-        </p>
-        <p>よかったらTwitterやFacebookで繋がってください！</p>
-        <div class="sns">
-          <a href="https://twitter.com/LifeisTechInc" class="sns-twitter"
-            >Twitter</a
-          >
-          <a href="https://www.facebook.com/LifeisTech" class="sns-facebook"
-            >Facebook</a
-          >
-          <a href="https://life-is-tech.com/school/" class="sns-website"
-            >Instagram</a
-          >
+        <div class="profile-header right"> 
+          <div class="line"></div>
+          <h2 class="section-title">contact</h2> 
+        </div>
+      <div class="sns">
+        <a href="https://www.instagram.com/_sli2._/" class="sns-icon sns-instagram"
+          ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100034457438633"
+          class="sns-facebook"
+          ></a>
+        <a href="https://github.com/cherrysaki" class="sns-icon sns-website"></a>
         </div>
       </div>
     </section>

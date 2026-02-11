@@ -1,0 +1,11 @@
+{
+  "folders": [
+	{
+		"name": "LA26spr_MyWebSite",
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "LA26spr_MyWebSite"
+  }
+}
