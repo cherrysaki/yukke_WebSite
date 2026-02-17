@@ -32,7 +32,9 @@ header {
   z-index: 9999;
   height: 80px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 header .container {
@@ -43,9 +45,10 @@ header .container {
 }
 
 header p {
+  font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
+  font-weight: 400;
+  letter-spacing: 0.15em;
 }
 
 header ul {
@@ -55,8 +58,27 @@ header ul {
 }
 
 header a {
-  font-size: 16px;
-  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+header a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+header a:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -70,27 +92,47 @@ header a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 800px;
+  height: 100vh;
+  position: relative;
   background-image: url("MyWebSozai/portrait.jpg");
-  background-position: center;
+  background-position: 70% center;
   background-size: cover;
 }
 
+.firstview::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.85) 0%,
+    rgba(255, 255, 255, 0.4) 35%,
+    rgba(255, 255, 255, 0) 65%
+  );
+  pointer-events: none;
+}
+
 .firstview h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
   font-size: 64px;
   color: #ffffff;
   width: 100%;
   text-align: right;
-  padding-left: 40px; /* 好きな余白 */
+  padding-right: 80px;
+  letter-spacing: 0.15em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
-/* .firstview p {
-  font-size: 14px;
-} */
-
 @media (max-width: 768px) {
+  .firstview {
+    background-position: 60% center;
+  }
   .firstview h1 {
-    font-size: 56px;
+    font-size: 40px;
+    padding-right: 30px;
   }
 }
 
@@ -100,7 +142,15 @@ header a {
 
 .profile {
   display: flex;
+  flex-direction: column;
   column-gap: 5%;
+}
+
+.profile-body {
+  display: flex;
+  align-items: center;
+  column-gap: 5%;
+  margin-top: 60px;
 }
 
 .profile h2 {
@@ -116,7 +166,6 @@ header a {
 }
 
 .profile h3 {
-  margin-top: 72px;
   font-size: 24px;
 }
 
@@ -133,18 +182,16 @@ header a {
 }
 
 .profile img {
-  width: 480px;
-  height: 270px;
+  width: 320px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  margin-left: 30%;
 }
 
 .profile-header.left {
   justify-content: flex-start;
-}
-
-.line {
-  width: 300px;
-  height: 1px;
-  background-color: #000;
 }
 
 @media (max-width: 768px) {
@@ -154,7 +201,7 @@ header a {
   .about {
     padding: 80px 0;
   }
-  .profile {
+  .profile-body {
     flex-direction: column;
     row-gap: 24px;
   }
@@ -188,7 +235,7 @@ header a {
 }
 
 .favorite-contents {
-  margin-top: 80px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -248,15 +295,23 @@ header a {
 
 .works-content {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
   width: 100%;
   column-gap: 32px;
   background-color: #ffffff;
   text-align: left;
-  padding: 40px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 30%);
+  padding: 20px 0;
   box-sizing: border-box;
-  border-radius: 4%;
+}
+
+.works-content:nth-child(-n + 2) {
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 32px;
+}
+
+.works-text {
+  flex: 1;
 }
 
 .works-content img {
@@ -264,32 +319,45 @@ header a {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 15%);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
 }
 
 .works-content h3 {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  width: 320px;
   padding: 4px;
-  column-gap: 16px;
-  font-size: 28px;
+  column-gap: 12px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .works-content p {
-  font-size: 14px;
-  margin-top: 16px;
+  font-size: 13px;
+  margin-top: 10px;
   color: #666666;
+}
+
+.works-link {
+  font-size: 18px;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+.works-link:hover {
+  opacity: 0.5;
 }
 
 .works-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
+  gap: 56px 100px;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 60px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
@@ -298,9 +366,17 @@ header a {
   }
 
   .works-content {
-    flex-direction: column;
     row-gap: 24px;
-    padding: 20px;
+    padding: 20px 0;
+  }
+
+  .works-content:nth-child(-n + 2) {
+    border-bottom: none;
+  }
+
+  .works-content:not(:last-child) {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 24px;
   }
 
   .works-content img {
@@ -313,8 +389,14 @@ header a {
 }
 
 .contact {
-  padding: 80px 0;
+  padding: 140px 0;
   text-align: center;
+}
+
+.contact .sns {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 }
 
 .contact a {
@@ -361,16 +443,15 @@ header a {
   }
 
   .contact .sns {
-    flex-direction: column;
-    row-gap: 10px;
-    margin-top: 50px;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
   }
 
   .contact a {
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    background-position: left 16px center;
+    width: 64px;
+    height: 64px;
+    background-position: center;
   }
 }
 
