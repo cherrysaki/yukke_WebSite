@@ -194,6 +194,62 @@ header a:hover::after {
   justify-content: flex-start;
 }
 
+.history {
+  margin-top: 60px;
+}
+
+.history-title {
+  font-size: 24px;
+}
+
+.history-title span {
+  font-size: 16px;
+  margin-left: 8px;
+  color: #666666;
+}
+
+.history-list {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  border-left: 2px solid #e0e0e0;
+}
+
+.history-list li {
+  position: relative;
+  display: flex;
+  column-gap: 20px;
+  padding: 0 0 28px 28px;
+}
+
+.history-list li:last-child {
+  padding-bottom: 0;
+}
+
+.history-list li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #333333;
+}
+
+.history-date {
+  flex-shrink: 0;
+  width: 80px;
+  font-size: 14px;
+  color: #666666;
+  font-weight: 600;
+}
+
+.history-text {
+  font-size: 14px;
+  color: #333333;
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 44px;
@@ -213,6 +269,16 @@ header a:hover::after {
   }
   .profile img {
     width: 100%;
+  }
+  .history {
+    margin-top: 40px;
+  }
+  .history-list li {
+    flex-direction: column;
+    row-gap: 4px;
+  }
+  .history-date {
+    width: auto;
   }
 }
 
