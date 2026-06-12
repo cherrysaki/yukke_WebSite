@@ -52,6 +52,10 @@
       content="https://lively-paletas-895843.netlify.app/MyWebSozai/portrait.jpg"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"
+      defer
+    ></script>
   </head>
 
   <body>
@@ -68,7 +72,11 @@
     </header>
 
     <section class="firstview">
-      <h1>Saki Kambayashi</h1>
+      <div id="p5-firstview"></div>
+      <div class="firstview-title">
+        <h1>SAKI KAMBAYASHI</h1>
+        <p class="firstview-sub">PORTFOLIO</p>
+      </div>
     </section>
 
     <section class="about" id="about">
@@ -140,7 +148,13 @@
           <h2 class="section-title">works</h2>
         </div>
         <div class="works-grid">
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-link=""
+          >
             <img src="MyWebSozai/sharepalette.png" alt="" />
             <div class="works-text">
               <h3>SharePalette</h3>
@@ -148,7 +162,13 @@
             </div>
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-link=""
+          >
             <img src="MyWebSozai/sharestudy.png" alt="" />
             <div class="works-text">
               <h3>ShareStudy</h3>
@@ -156,151 +176,112 @@
             </div>
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-link="https://apps.apple.com/jp/app/hibiku/id6747329090"
+          >
             <img src="MyWebSozai/hibiku.png" alt="" />
             <div class="works-text">
               <h3>Hibiku</h3>
               <p>感情を、響かせよう</p>
             </div>
-            <a
-              href="https://apps.apple.com/jp/app/hibiku/id6747329090"
-              class="works-link"
-              target="_blank"
-              >→</a
-            >
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-link="https://apps.apple.com/jp/app/26th%E7%9F%A2%E4%B8%8A%E7%A5%AD%E5%85%AC%E5%BC%8F%E3%82%A2%E3%83%97%E3%83%AA-yagamy/id6670170166"
+          >
             <img src="MyWebSozai/yagamy.png" alt="" />
             <div class="works-text">
               <h3>Yagamy</h3>
               <p>矢上祭の公式アプリ</p>
             </div>
-            <a
-              href="https://apps.apple.com/jp/app/26th%E7%9F%A2%E4%B8%8A%E7%A5%AD%E5%85%AC%E5%BC%8F%E3%82%A2%E3%83%97%E3%83%AA-yagamy/id6670170166"
-              class="works-link"
-              target="_blank"
-              >→</a
-            >
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-link=""
+          >
             <img src="MyWebSozai/kaojichi.png" alt="" />
             <div class="works-text">
               <h3>顔質アラーム</h3>
               <p>間に合わなかったら、寝顔公開。</p>
             </div>
-            <a href="#" class="works-link" target="_blank">→</a>
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: HTML / CSS / JavaScript）"
+            data-link="https://cherrysaki.com/"
+          >
             <img src="MyWebSozai/cherrysaki.com.png" alt="" />
             <div class="works-text">
               <h3>cherrysaki.com</h3>
               <p>桜の魅力を知って、見に行きたくなる</p>
             </div>
-            <a href="https://cherrysaki.com/" class="works-link" target="_blank"
-              >→</a
-            >
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: HTML / CSS / JavaScript）"
+            data-link="https://little-monsters-877c0.web.app/"
+          >
             <img src="MyWebSozai/Prompt_master.png" alt="" />
             <div class="works-text">
               <h3>プロンプトマスター</h3>
               <p>正しいプロンプトの書き方を覚えよう</p>
             </div>
-            <a
-              href="https://little-monsters-877c0.web.app/"
-              class="works-link"
-              target="_blank"
-              >→</a
-            >
           </div>
 
-          <div class="works-content">
+          <div
+            class="works-content"
+            tabindex="0"
+            data-detail="ここに詳細な作品説明を記入"
+            data-stack="使用技術をここに記入（例: HTML / CSS / JavaScript）"
+            data-link="https://gokigenrunrun.github.io/kireicchi-web/"
+          >
             <img src="MyWebSozai/Kireicchi.png" alt="" />
             <div class="works-text">
               <h3>きれいっち</h3>
               <p>始めよう、自分のためだけじゃない、片付け習慣。</p>
             </div>
-            <a
-              href="https://gokigenrunrun.github.io/kireicchi-web/"
-              class="works-link"
-              target="_blank"
-              >→</a
-            >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- <section class="favorite" id="favorite">
-      <div class="container">
-        <div class="profile-header left">
-          <h2 class="section-title">hobby</h2>
-          <div class="line"></div>
-        </div>
-        <div class="favorite-contents">
-          <p>旅行に行くのが趣味です。<br>
-            旅先の景色や空気に触れることで、日常の見え方が少し変わる瞬間が好きです。<br>
-            春休みもたくさんの旅行に行く予定です。
-          </p>
-          <div class="travel-collage">
-            <img src="travel/IMG_0820.jpg" class="span-large" alt="travel photo">
-            <img src="travel/9b779af2-e708-49e1-bf76-05fedbe21672.JPG" alt="travel photo">
-            <img src="travel/IMG_0782.jpg" alt="travel photo">
-            <img src="travel/acab81da-c749-4b08-ae12-921391197f77.JPG" class="span-wide" alt="travel photo">
-            <img src="travel/IMG_0849.jpg" alt="travel photo">
-            <img src="travel/IMG_2807.jpg" alt="travel photo">
-            <img src="travel/IMG_2841.jpg" alt="travel photo">
-            <img src="travel/IMG_0361.jpg" alt="travel photo">
-            <img src="travel/IMG_2844.jpg" class="span-tall" alt="travel photo">
-            <img src="travel/IMG_4658.jpg" class="span-wide" alt="travel photo">
-            <img src="travel/IMG_4679.jpg" alt="travel photo">
-            <img src="travel/IMG_4730.jpg" alt="travel photo">
-            <img src="travel/IMG_3782.jpg" class="span-tall" alt="travel photo">
-            <img src="travel/IMG_5DDE341EC841-1.jpeg" class="span-large" alt="travel photo">
-            <img src="travel/IMG_4784.jpg" alt="travel photo">
-            <img src="travel/IMG_4843.jpg" alt="travel photo">
-            <img src="travel/IMG_4882.jpg" class="span-tall" alt="travel photo">
-            <img src="travel/IMG_6261.jpg" alt="travel photo">
-            <img src="travel/IMG_6297.jpg" alt="travel photo">
-            <img src="travel/IMG_8391.jpg" class="span-tall" alt="travel photo">
-            <img src="travel/IMG_6625.jpg" class="span-wide" alt="travel photo">
-            <img src="travel/IMG_8458.jpg" alt="travel photo">
-            <img src="travel/IMG_8581.JPG" alt="travel photo"> -->
-    <!-- <img src="travel/IMG_8609.jpg" class="span-large" alt="travel photo">
-            <img src="travel/IMG_8621.jpg" alt="travel photo">
-            <img src="travel/IMG_8720.jpg" alt="travel photo">
-            <img src="travel/IMG_8778.jpg" class="span-wide" alt="travel photo">
-            <img src="travel/IMG_8830.PNG" alt="travel photo">
-            <img src="travel/IMG_8971.jpg" alt="travel photo">
-            <img src="travel/IMG_8981.jpg" alt="travel photo">
-            <img src="travel/IMG_9107.jpg" alt="travel photo">
-          </div>
-      </div>
-    </section>
+    <footer>Copyright © Saki Kambayashi. All Rights Reserved.</footer>
 
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="profile-header right"> 
-          <div class="line"></div>
-          <h2 class="section-title">contact</h2> 
+    <div class="modal-overlay" id="work-modal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true">
+        <button class="modal-close" aria-label="閉じる">×</button>
+        <img class="modal-img" src="" alt="" />
+        <h3 class="modal-title"></h3>
+        <p class="modal-desc"></p>
+        <div class="modal-stack">
+          <h4>技術スタック</h4>
+          <p class="modal-stack-text"></p>
         </div>
-      <div class="sns">
-        <a href="https://www.instagram.com/_sli2._/" class="sns-icon sns-instagram"
-          ></a>
-        <a
-          href="https://www.facebook.com/profile.php?id=100034457438633"
-          class="sns-facebook"
-          ></a>
-        <a href="https://github.com/cherrysaki" class="sns-icon sns-website"></a>
-        <a href ="https://life-is-tech.com" alt = "" >Life is Tech!</a>
-        </div>
+        <a class="modal-link" href="#" target="_blank" rel="noopener"
+          >サイトを見る →</a
+        >
       </div>
-    </section> -->
+    </div>
 
-    <footer>@Life is Tech! WebDesign Course</footer>
+    <script src="script.js"></script>
+    <script src="p5-firstview.js" defer></script>
   </body>
 </html>
