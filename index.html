@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@100..900&family=Zen+Maru+Gothic&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <script>
@@ -65,8 +65,6 @@
         <ul>
           <li><a href="#about">about</a></li>
           <li><a href="#works">works</a></li>
-          <li><a href="#favorite">hobby</a></li>
-          <li><a href="#contact">contact</a></li>
         </ul>
       </div>
     </header>
@@ -82,18 +80,15 @@
     <section class="about" id="about">
       <div class="container">
         <div class="profile">
-          <div class="profile-header left">
-            <h2 class="section-title">about me</h2>
-            <div class="line"></div>
-          </div>
+          <h2 class="section-title">about me</h2>
           <div class="profile-body">
             <div>
               <h3>神林 沙希 <span>Kambayashi Saki</span></h3>
               <p>
-                19歳/東京都出身<br />
-                慶應義塾大学理工学部<br />
+                20歳/東京都出身<br />
+                慶應義塾大学理工学部情報工学科<br />
                 メンター名はゆっけ。<br />
-                LifeisTech!17期のiPhoneコース<br />
+                現在は、iPhoneコースとwebデザインコースでメンターをしています。
               </p>
             </div>
             <img src="MyWebSozai/IMG_7435.jpg" alt="" />
@@ -143,16 +138,15 @@
 
     <section class="works" id="works">
       <div class="container">
-        <div class="profile-header right">
-          <div class="line"></div>
-          <h2 class="section-title">works</h2>
-        </div>
+        <h2 class="section-title">works</h2>
         <div class="works-grid">
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-detail="実際に自分の撮影した写真から色を抽出して、自分だけの色のマップコレクションを作れます。思い出と共に、あなただけのパレットを作ってみませんか？"
+            data-stack="Swift"
+            data-period=""
+            data-award="アプリ甲子園2022 GMOアドパートナーズ賞"
             data-link=""
           >
             <img src="MyWebSozai/sharepalette.png" alt="" />
@@ -165,8 +159,10 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-detail="目標時間を宣言して、集中を競い合うアプリです。友達と一緒に、勉強や作業の集中力を高めましょう！"
+            data-stack="Swift"
+            data-period=""
+            data-award=""
             data-link=""
           >
             <img src="MyWebSozai/sharestudy.png" alt="" />
@@ -179,8 +175,12 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-detail="声でえがく、心の波形。新感覚日記アプリ「Hibiku.」では、日本語の豊かな「オノマトペ」と、感情が最も素直に表れる「声」を使って、自分の記録していくことができます。
+考えるより先に、感じるままに。あなたの本当の気持ちに耳を澄ませてみませんか？
+"
+            data-stack="SwiftUI"
+            data-period=""
+            data-award=""
             data-link="https://apps.apple.com/jp/app/hibiku/id6747329090"
           >
             <img src="MyWebSozai/hibiku.png" alt="" />
@@ -193,8 +193,10 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-detail="矢上祭の公式アプリです。タイムテーブルや出店情報など、矢上祭に関する様々な情報を提供しています。矢上祭をより楽しむための必須アイテムです！"
+            data-stack="Flutter"
+            data-period=""
+            data-award=""
             data-link="https://apps.apple.com/jp/app/26th%E7%9F%A2%E4%B8%8A%E7%A5%AD%E5%85%AC%E5%BC%8F%E3%82%A2%E3%83%97%E3%83%AA-yagamy/id6670170166"
           >
             <img src="MyWebSozai/yagamy.png" alt="" />
@@ -207,8 +209,32 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: Swift / Firebase）"
+            data-detail="「間に合わなかったら、寝顔公開。」
+そんな緊張感で、あなたの朝を変えるアラームアプリです。
+
+遅刻の原因は「起きられない」ことだけではありません。
+本当の問題は、「家を出られない」こと。
+
+このアプリは、起床から出発までを一貫して管理します。
+
+◇起床から出発までの管理
+・起床時刻と出発時刻を設定
+・顔を映さないと止まらないアラーム
+・出発までのカウントダウン
+・出発できなかった場合、寝起きの写真を自動投稿
+
+起きるだけで終わらず、「出発できる」状態まで導きます。
+
+◇友達と一緒に使える仕組み
+・起床済み／出発済み／未投稿を確認
+・友達の状況がリアルタイムでわかる
+・一緒に朝の準備を進められる
+
+起きるだけでは、遅刻は防げない。
+出発できる朝へ。"
+            data-stack="SwiftUI"
+            data-period="2025年9月"
+            data-award="Open Hack U KANAZAWA HappyHacking賞"
             data-link=""
           >
             <img src="MyWebSozai/kaojichi.png" alt="" />
@@ -221,8 +247,11 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: HTML / CSS / JavaScript）"
+            data-detail="春になると、つい桜の写真を撮ってしまったり、
+ いつもより少しゆっくり歩いて桜を見上げてしまったりすることはないでしょうか。桜の魅力の理由を知って、もっと桜を楽しむためのサイトです。"
+            data-stack="HTML / CSS / JavaScript"
+            data-period="2026年3月"
+            data-award=""
             data-link="https://cherrysaki.com/"
           >
             <img src="MyWebSozai/cherrysaki.com.png" alt="" />
@@ -235,8 +264,14 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: HTML / CSS / JavaScript）"
+            data-detail="中高生にとって、AIを使うときに一番難しいことは何でしょう。「どう文を書けばいいのかわからない」「AIにやりたいことを言語化させるのが難しい」。プロンプトマスターでは、お題のプロダクトを触って、見て、どのような動きをするか確かめながら、お題を忠実に再現するためのプロンプトを時間内に入力し、AI採点によってスコアを競います。
+その後、プロンプトに対してフィードバックを行い、もう一度挑戦することができます。今度は時間無制限！じっくり考えて、具体的なプロンプトの書き方をアウトプットしましょう！本アプリは、従来のプロンプトを学べるアプリとは違い、ものづくりに焦点を当てて、Previewから機能や見た目を言語化することを一連の流れとして組み込みました。
+
+
+"
+            data-stack="Flutter"
+            data-period="2026年3月"
+            data-award="GDGoC JPHacks AI賞"
             data-link="https://little-monsters-877c0.web.app/"
           >
             <img src="MyWebSozai/Prompt_master.png" alt="" />
@@ -249,8 +284,12 @@
           <div
             class="works-content"
             tabindex="0"
-            data-detail="ここに詳細な作品説明を記入"
-            data-stack="使用技術をここに記入（例: HTML / CSS / JavaScript）"
+            data-detail="毎日決まった時間に撮影！撮影であなたの部屋がドット絵になり、そこに妖精「きれいっち」が生活します。
+同時に、AIが部屋の綺麗さをスコア化＆片付ける場所を提案。
+きれいっちが元気に暮らすためにも継続的に片付けを行いましょう！"
+            data-stack="SwiftUI"
+            data-period="2026年4月〜"
+            data-award="技育Camp vol.2 最優秀賞, 技育博 サイバーエージェント賞"
             data-link="https://gokigenrunrun.github.io/kireicchi-web/"
           >
             <img src="MyWebSozai/Kireicchi.png" alt="" />
@@ -274,6 +313,14 @@
         <div class="modal-stack">
           <h4>技術スタック</h4>
           <p class="modal-stack-text"></p>
+        </div>
+        <div class="modal-period">
+          <h4>制作期間</h4>
+          <p class="modal-period-text"></p>
+        </div>
+        <div class="modal-award">
+          <h4>受賞歴</h4>
+          <p class="modal-award-text"></p>
         </div>
         <a class="modal-link" href="#" target="_blank" rel="noopener"
           >サイトを見る →</a

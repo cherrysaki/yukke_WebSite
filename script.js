@@ -7,6 +7,10 @@
   const modalTitle = overlay.querySelector(".modal-title");
   const modalDesc = overlay.querySelector(".modal-desc");
   const modalStackText = overlay.querySelector(".modal-stack-text");
+  const modalPeriod = overlay.querySelector(".modal-period");
+  const modalPeriodText = overlay.querySelector(".modal-period-text");
+  const modalAward = overlay.querySelector(".modal-award");
+  const modalAwardText = overlay.querySelector(".modal-award-text");
   const modalLink = overlay.querySelector(".modal-link");
   const modalBox = overlay.querySelector(".modal");
   const closeBtn = overlay.querySelector(".modal-close");
@@ -25,6 +29,16 @@
     modalDesc.textContent = detail;
 
     modalStackText.textContent = card.dataset.stack || "";
+
+    // 制作期間: 空ならセクションごと非表示
+    const period = card.dataset.period || "";
+    modalPeriodText.textContent = period;
+    modalPeriod.hidden = !period;
+
+    // 受賞歴: 空ならセクションごと非表示
+    const award = card.dataset.award || "";
+    modalAwardText.textContent = award;
+    modalAward.hidden = !award;
 
     const link = card.dataset.link || "";
     if (link) {
